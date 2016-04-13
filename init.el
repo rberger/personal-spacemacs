@@ -57,7 +57,9 @@ values."
      tmux
      vagrant
      version-control
-     wakatime
+     (wakatime :variables
+               wakatime-api-key "c1c2b86b-993f-43a9-b7ae-7a742cc425d7"
+               wakatime-cli-path "/usr/local/bin/wakatime")
      websequences
      yaml
      xkcd
@@ -224,7 +226,7 @@ user code."
   "Configuration function for user code.
  This function is called at the very end of Spacemacs initialization after
 layers configuration. You are free to put any user code."
-  '(global-wakatime-mode)
+;  '(global-wakatime-mode)
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
@@ -238,11 +240,10 @@ layers configuration. You are free to put any user code."
  '(package-selected-packages
    (quote
     (evil-leader evil which-key quelpa package-build use-package bind-key s dash spacemacs-theme)))
- '(wakatime-api-key "c1c2b86b-993f-43a9-b7ae-7a742cc425d7")
- '(wakatime-cli-path "/usr/local/bin/wakatime"))
-(custom-set-faces
+ custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(company-tooltip-common ((t (:inherit company-tooltip :weight bold :underline nil))))
+ '(company-tooltip-common-selection ((t (:inherit company-tooltip-selection :weight bold :underline nil)))))
