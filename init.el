@@ -239,8 +239,8 @@ layers configuration. You are free to put any user code."
  '(ns-command-modifier (quote meta))
  '(package-selected-packages
    (quote
-    (evil-leader evil which-key quelpa package-build use-package bind-key s dash spacemacs-theme)))
- custom-set-faces
+    (evil-leader evil which-key quelpa package-build use-package bind-key s dash spacemacs-theme))))
+(custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
