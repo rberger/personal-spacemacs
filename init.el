@@ -59,6 +59,7 @@ values."
      version-control
      (wakatime :variables
                wakatime-api-key "c1c2b86b-993f-43a9-b7ae-7a742cc425d7"
+               wakatime-python-bin "/usr/local/bin/python"
                wakatime-cli-path "/usr/local/bin/wakatime")
      websequences
      yaml
