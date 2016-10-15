@@ -85,7 +85,7 @@ values."
                                       nginx-mode)
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
-   ;; A list of packages and/or extensions that will not be install and loaded.
+   ;; A list of packages that will not be installed and loaded.
    dotspacemacs-excluded-packages '()
    ;; Defines the behaviour of Spacemacs when installing packages.
    ;; Possible values are `used-only', `used-but-keep-unused' and `all'.
@@ -147,7 +147,7 @@ values."
    ;; List sizes may be nil, in which case
    ;; `spacemacs-buffer-startup-lists-length' takes effect.
    ;; (default nil)
-   dotspacemacs-startup-lists '((recents . 5) (projects . 7))
+   dotspacemacs-startup-lists '(recents projects)
    ;; True if the home buffer should respond to resize events.
    dotspacemacs-startup-buffer-responsive t
    ;; Default major mode of the scratch buffer (default `text-mode')
@@ -335,26 +335,8 @@ explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   '(global-wakatime-mode)
   '(sp-use-paredit-bindings)
-  '(wakatime-api-key "c1c2b86b-993f-43a9-b7ae-7a742cc425d7"))
+  '(wakatime-api-key "c1c2b86b-993f-43a9-b7ae-7a742cc425d7")
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(evil-want-Y-yank-to-eol t)
- '(ns-command-modifier (quote meta))
- '(package-selected-packages
-   (quote
-    (org-plus-contrib evil-leader evil which-key quelpa package-build use-package bind-key s dash spacemacs-theme)))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(default ((t (:background nil :family "Source Code Pro" :foundry "nil" :slant normal :weight normal :height 130 :width normal))))
- '(company-tooltip-common ((t (:inherit company-tooltip :weight bold :underline nil))))
- '(company-tooltip-common-selection ((t (:inherit company-tooltip-selection :weight bold :underline nil)))))
