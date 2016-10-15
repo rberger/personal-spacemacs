@@ -57,7 +57,9 @@ values."
      tmux
      vagrant
      version-control
-     wakatime
+     (wakatime :variables
+               wakatime-api-key "c1c2b86b-993f-43a9-b7ae-7a742cc425d7"
+               wakatime-cli-path "/usr/local/bin/wakatime")
      websequences
      yaml
      xkcd
@@ -66,7 +68,8 @@ values."
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages then consider to create a layer, you can also put the
    ;; configuration in `dotspacemacs/config'.
-   dotspacemacs-additional-packages '()
+   dotspacemacs-additional-packages '(
+                                      nginx-mode)
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '()
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
@@ -225,6 +228,7 @@ user code."
  This function is called at the very end of Spacemacs initialization after
 layers configuration. You are free to put any user code."
   '(global-wakatime-mode)
+  '(sp-use-paredit-bindings)
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
@@ -234,15 +238,17 @@ layers configuration. You are free to put any user code."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(evil-want-Y-yank-to-eol t)
  '(ns-command-modifier (quote meta))
  '(package-selected-packages
    (quote
-    (evil-leader evil which-key quelpa package-build use-package bind-key s dash spacemacs-theme)))
- '(wakatime-api-key "c1c2b86b-993f-43a9-b7ae-7a742cc425d7")
- '(wakatime-cli-path "/usr/local/bin/wakatime"))
+    (org-plus-contrib evil-leader evil which-key quelpa package-build use-package bind-key s dash spacemacs-theme)))
+ '(wakatime-api-key "c1c2b86b-993f-43a9-b7ae-7a742cc425d7"))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(default ((t (:background nil :family "Source Code Pro" :foundry "nil" :slant normal :weight normal :height 130 :width normal))))
+ '(company-tooltip-common ((t (:inherit company-tooltip :weight bold :underline nil))))
+ '(company-tooltip-common-selection ((t (:inherit company-tooltip-selection :weight bold :underline nil)))))
