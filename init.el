@@ -42,7 +42,6 @@ values."
      (clojure :variables clojure-enable-fancify-symbols t)
      colors
      dash
-     dockerfile
      emacs-lisp
      evernote
      git
@@ -167,7 +166,7 @@ values."
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
    dotspacemacs-default-font '("Source Code Pro"
-                               :size 13
+                               :size 14
                                :weight normal
                                :width normal
                                :powerline-scale 1.1)
@@ -324,7 +323,7 @@ executes.
  This function is mostly useful for variables that need to be set
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
-  )
+)
 
 (defun dotspacemacs/user-config ()
   "Configuration function for user code.
@@ -336,6 +335,8 @@ you should place your code here."
   '(global-wakatime-mode)
   '(sp-use-paredit-bindings)
   '(wakatime-api-key "c1c2b86b-993f-43a9-b7ae-7a742cc425d7")
+  '(setq-default persp-auto-save-opt 0)
+  '(setq clojure-enable-fancify-symbols nil)
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
