@@ -65,6 +65,7 @@ values."
      spell-checking
      sql
      syntax-checking
+     terraform
      themes-megapack
      tmux
      vagrant
@@ -336,7 +337,7 @@ you should place your code here."
   '(sp-use-paredit-bindings)
   '(wakatime-api-key "c1c2b86b-993f-43a9-b7ae-7a742cc425d7")
   '(setq-default persp-auto-save-opt 0)
-  '(setq clojure-enable-fancify-symbols nil)
+  (setq clojure-enable-fancify-symbols nil)
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
@@ -346,6 +347,12 @@ you should place your code here."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(ansi-color-names-vector
+   ["#0a0814" "#f2241f" "#67b11d" "#b1951d" "#4f97d7" "#a31db1" "#28def0" "#b2b2b2"])
+ '(custom-enabled-themes (quote (sanityinc-solarized-light)))
+ '(custom-safe-themes
+   (quote
+    ("4cf3221feff536e2b3385209e9b9dc4c2e0818a69a1cdb4b522756bcdf4e00a4" default)))
  '(sp-base-key-bindings (quote paredit)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
