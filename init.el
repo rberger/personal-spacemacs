@@ -51,7 +51,8 @@ values."
      asciidoc
      auto-completion
      better-defaults
-     (clojure :variables clojure-enable-fancify-symbols t)
+     (clojure :variables clojure-enable-fancify-symbols t
+              clojure-enable-clj-refactor f)
      colors
      csv
      dash
