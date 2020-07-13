@@ -51,22 +51,21 @@ values."
      asciidoc
      auto-completion
      better-defaults
-     (clojure :variables clojure-enable-fancify-symbols t
-              clojure-enable-clj-refactor f)
+     (clojure :variables clojure-enable-fancify-symbols t)
      colors
      csv
      dash
      emacs-lisp
      github
      go
-     graphviz
      git
      github
      go
      graphviz
      helm
      html
-     java
+     ;; java ;; For some reason giving me an error about groovy
+     ;; An error occurred while post-configuring company in layer groovy (error: (void-variable groovy-mode))
      javascript
      markdown
      ocaml
@@ -345,7 +344,7 @@ values."
    dotspacemacs-server-socket-dir nil
    ;; If non nil, advise quit functions to keep server open when quitting.
    ;; (default nil)
-   dotspacemacs-persistent-server t
+   dotspacemacs-persistent-server nil
    ;; List of search tool executable names. Spacemacs uses the first installed
    ;; tool of the list. Supported tools are `ag', `pt', `ack' and `grep'.
    ;; (default '("ag" "pt" "ack" "grep"))
@@ -393,7 +392,6 @@ you should place your code here."
  '(ansi-color-names-vector
    (vector "#657b83" "#dc322f" "#859900" "#b58900" "#268bd2" "#d33682" "#2aa198" "#002b36"))
  '(beacon-color "#d33682")
- '(custom-enabled-themes '(sanityinc-tomorrow-day))
  '(custom-safe-themes
    '("bb08c73af94ee74453c90422485b29e5643b73b05e8de029a6909af6a3fb3f58" "4cf3221feff536e2b3385209e9b9dc4c2e0818a69a1cdb4b522756bcdf4e00a4" "bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" "830877f4aab227556548dc0a28bf395d0abe0e3a0ab95455731c9ea5ab5fe4e1" "13a8eaddb003fd0d561096e11e1a91b029d3c9d64554f8e897b2513dbf14b277" "7f1d414afda803f3244c6fb4c2c64bea44dac040ed3731ec9d75275b9e831fe5" "2809bcb77ad21312897b541134981282dc455ccd7c14d74cc333b6e549b824f3" "4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" default))
  '(evil-want-Y-yank-to-eol nil)
