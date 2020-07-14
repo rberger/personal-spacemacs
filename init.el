@@ -86,7 +86,7 @@ values."
      scheme
      shell-scripts
      spell-checking
-     sql
+     ;; sql
      syntax-checking
      terraform
      themes-megapack
